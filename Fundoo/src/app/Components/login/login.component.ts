@@ -31,7 +31,7 @@ loginHandler(){
    console.log(response);
 
    if(response.data != null){
-     this.route.navigateByUrl('')
+     this.route.navigateByUrl('/Dashboard')
    }
  });
 

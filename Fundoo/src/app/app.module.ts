@@ -22,13 +22,15 @@ import {
   SocialAuthServiceConfig,
 } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+import { DashBoardComponent } from './Components/dash-board/dash-board.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashBoardComponent
   ],
   imports: [
     BrowserModule,
