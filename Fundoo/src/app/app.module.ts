@@ -16,6 +16,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { RegisterComponent } from './Components/register/register.component';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import {NgIf, NgFor} from '@angular/common';
+import {MatListModule} from '@angular/material/list';
+import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {FormsModule } from '@angular/forms';
+
+
 // GOOGLE LOGIN
 import {
   SocialLoginModule,
@@ -33,6 +45,14 @@ import { DashBoardComponent } from './Components/dash-board/dash-board.component
     DashBoardComponent
   ],
   imports: [
+    FormsModule,
+    MatToolbarModule,
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule,
+    NgIf, NgFor,
+    MatMenuModule,
+    MatDialogModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
