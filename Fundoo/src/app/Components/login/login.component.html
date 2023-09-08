@@ -27,7 +27,7 @@
 
         <!-- Marquee with message -->
         <marquee behavior="scroll" direction="left" scrollamount="4">
-            <p style="color:black; font-size: 18px;">Empowering Your Productivity Journey: Experience Fundoo App Now!
+            <p style="color:black; font-size: 18px;">Empowering Your Productivity Journey: Experience Fundoo App Now!"
 
 
 
@@ -98,3 +98,66 @@
 </div>
 
 
+
+
+
+
+
+<!-- <div class="LoginContainer">
+
+
+
+    <mat-card class="matCards">
+
+        <div class="headings">
+            <div class="fundoologo">
+                <span class="fLetter">F</span>
+                <span class="uLetter">U</span>
+                <span class="nLetter">N</span>
+                <span class="dLetter">D</span>
+                <span class="oLetter">O</span>
+                <span class="ooLetter">O</span>
+            </div>
+            <div class="signin">
+                <h2> Sign in </h2>
+            </div>
+            <h4> Use your Google Account </h4>
+        </div>
+
+        <form class="formContainer" [formGroup]="loginForm" (ngSubmit)="loginHandler()" >
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email" >
+                    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+                    <mat-error *ngIf="loginForm.get('password')?.errors?.['pattern']">Password is not valid</mat-error>
+
+                </mat-form-field>
+            </p>
+
+            <p>
+                Not your computer? Use Guest mode to sign in privately.
+                <br>
+                <a href="#"> Learn more </a>
+            </p>
+
+            <div class="btnContainer">
+                <button mat-button color="primary" routerLink="/Register" >Create account</button>
+                <button mat-raised-button color="primary">Login</button>
+            </div>
+
+        </form>
+
+
+
+    </mat-card>
+
+</div> -->
