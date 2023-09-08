@@ -1,0 +1,103 @@
+<div class="mainContainer">
+
+    <!-- <div class="innerConatiner"> -->
+    <mat-card class="innerConatiner">
+
+
+        <!-- LEFT CONTAINER FOR FORM -->
+        <div class="leftContainer">
+
+            <!-- FUNCDOO LOGO  -->
+            <div class="fundoologo">
+                <span class="fLetter">F</span>
+                <span class="uLetter">U</span>
+                <span class="nLetter">N</span>
+                <span class="dLetter">D</span>
+                <span class="oLetter">O</span>
+                <span class="ooLetter">O</span>
+            </div>
+
+            <!-- HEADING -->
+            <div class="headingAcc">
+                <h2> Create Your Fundoo Account </h2>
+            </div>
+
+            <!-- FORM -->
+            <form [formGroup]="registerForm" (ngSubmit)="RegisterationHandler()">
+
+                <!-- FIRST NAME AND LAST NAME -->
+                <div class="Row">
+                    
+                    <div class="col1">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First name</mat-label>
+                            <input matInput placeholder="First name" formControlName="firstName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last name</mat-label>
+                            <input matInput placeholder="Last name" formControlName="lastName">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <!-- EMAIL BLOCK -->
+                <div class="emailBlock">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email">
+                    </mat-form-field>
+                </div>
+
+                <!-- PASSWORD AND CONFIRM PASSWORD:- -->
+                <div class="Row">
+                    <div class="col1">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                    </div>
+                    <div class="col2">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput placeholder="Confirm Password">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+                <!-- PASSWORD SUGGETION:- -->
+                <div class="passSugg">
+                    <h3>
+                        Use 8 or more characters with mix of letters , Numbers , Symbols
+                    </h3>
+                </div>
+
+                <!-- BUTTON CONTAINER:- -->
+                <div class="btnContainer">
+                    <button mat-button color="primary" routerLink="/">Sign in instead</button>
+                    <button mat-raised-button color="primary">Register</button>                    
+                </div>
+
+            </form>
+        </div>
+
+
+        <!-- RIGHT CONTAINER FOR IMAGE -->
+        <div class="RightContainer">
+             <img src="data:image/png;base64,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"
+                    alt="Google Image">
+        </div>
+
+    </mat-card>
+    <!-- </div> -->
+
+</div>
+
+
+
+
+
+

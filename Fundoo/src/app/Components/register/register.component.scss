@@ -1,0 +1,111 @@
+.mainContainer {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2); /* Increase the blur and spread radius */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.innerConatiner{
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);     width:50%;
+    min-height:80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+// LEFT CONTAINER:-
+.leftContainer{
+    // bordeR:1px solid black;
+    width:60%;
+}
+
+// FUNDOO LOGO:-
+.fundoologo{
+    display:flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    height: 7%;    
+    margin-bottom: 0;
+}
+.logoText{
+    font-size: 24px;
+    height: 8%;
+    color: #202124;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-weight: 400;
+}
+.fLetter{
+    color: blue;
+}
+.uLetter{
+    color: brown;
+}
+.nLetter{
+    color: red;
+}
+.dLetter{
+    color: green;
+}
+.oLetter{
+    color: gold;
+}
+.ooLetter{
+    color: skyblue;
+} 
+
+
+// HEADING
+.headingAcc{
+    text-align: center;
+    font-weight: 500;
+}
+
+// FIRST NAME AND LAST NAME:-
+.Row{
+    // background-color: aqua;
+    display: flex;
+    margin:0;
+    // padding:0px 2px 0px 2px;
+}
+.col1{
+    padding: 0px 3px 0px 1px;
+}
+.col2{
+    padding: 0px 3px 0px 1px;
+}
+
+// EMAIL BLOCK:-
+.emailBlock mat-form-field{
+    width:100%;
+}
+
+//PASSWORD SUGGETION:-
+.passSugg h3{
+    font-weight: 500;
+}
+
+// BUTTON CONTAINER:-
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.RightContainer{
+    width:40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
