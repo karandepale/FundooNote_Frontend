@@ -16,6 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { RegisterComponent } from './Components/register/register.component';
 
+// GOOGLE LOGIN
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from '@abacritt/angularx-social-login';
+import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +40,23 @@ import { RegisterComponent } from './Components/register/register.component';
     MatCardModule,
     MatButtonModule,
     HttpClientModule , 
-    MatIconModule
+    MatIconModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('262275583605-kunacf1c4h49hh7t06tb0q8hr0tjk1it.apps.googleusercontent.com'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

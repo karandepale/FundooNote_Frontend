@@ -1,6 +1,8 @@
 import { Component , OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/Services/USER/user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit {
 
-constructor(private route : Router){}
+  constructor(private userService:UserService, private route:Router) { }
 
 ngOnInit(): void {  }
 
@@ -25,13 +27,13 @@ loginHandler(){
     password:this.loginForm.value.password
   }
   
-  //this.userService.Login(data).subscribe((response:any)=>{
-   // console.log(response);
+  this.userService.Login(data).subscribe((response:any)=>{
+   console.log(response);
 
- //   if(response.data != null){
- //     this.route.navigateByUrl('/Dashboard')
- //   }
- // });
+   if(response.data != null){
+     this.route.navigateByUrl('')
+   }
+ });
 
 //  createAccHandler(){
 //   console.log("Clicked...");
