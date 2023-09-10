@@ -1,0 +1,37 @@
+// .mainCon{
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: black;
+//     margin-left:400px;
+// }
+
+.noteCardContainer{
+    // border: 1px solid black;
+    width:500px;
+    margin-left:400px;
+    margin-top:10px;
+    // height:100px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content{
+    padding-top:7px;
+    padding-left: 13px;
+}
+
+.hoverIcons {
+   
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+      margin-left: 25px;
+    visibility: hidden; 
+}
+
+.hoverIcons:hover .icon {
+    visibility: visible; 
+}
+

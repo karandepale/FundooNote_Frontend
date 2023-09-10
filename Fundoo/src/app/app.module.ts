@@ -35,6 +35,7 @@ import {
 } from '@abacritt/angularx-social-login';
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { DashBoardComponent } from './Components/dash-board/dash-board.component';
+import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { DashBoardComponent } from './Components/dash-board/dash-board.component
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    DisplayNotesComponent
   ],
   imports: [
     FormsModule,

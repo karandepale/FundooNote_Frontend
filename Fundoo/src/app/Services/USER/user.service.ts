@@ -8,9 +8,14 @@ import { HttpService } from '../HTTP/http.service';
 })
 export class UserService {
 
-  
- // base = environment.baseUrl;
-   //base = https://localhost:44318/api/User/Login
+  // SETTING and GETTING THE USER DATA FROM LOGIN COMPONENT:-
+  private userData: any;
+  setUserData(data: any) {
+    this.userData = data;
+  }
+  getUserData() {
+    return this.userData;
+  }
 
   constructor(private httpService:HttpService) { }
   
@@ -27,11 +32,13 @@ export class UserService {
   Register(data:any){
     let header = {
       headers : new HttpHeaders({
-        'content-type':'application/json'
-      })
+        'content-type':'application/json' 
+      })  
     }
    return this.httpService.postService(`https://localhost:44318/api/User/Registration` , data , false , header)
   }
+
+  
 
 }
   
