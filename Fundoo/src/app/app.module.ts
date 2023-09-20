@@ -27,7 +27,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {FormsModule } from '@angular/forms';
 
-
+import { AuthService } from './Services/AUTH/auth.service';
 // GOOGLE LOGIN
 import {
   SocialLoginModule,
@@ -36,6 +36,8 @@ import {
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { DashBoardComponent } from './Components/dash-board/dash-board.component';
 import { DisplayNotesComponent } from './Components/display-notes/display-notes.component';
+import { CraeteNoteComponent } from './Components/craete-note/craete-note.component';
+import { CollabComponent } from './Components/collab/collab.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { DisplayNotesComponent } from './Components/display-notes/display-notes.
     LoginComponent,
     RegisterComponent,
     DashBoardComponent,
-    DisplayNotesComponent
+    DisplayNotesComponent,
+    CraeteNoteComponent,
+    CollabComponent
   ],
   imports: [
     FormsModule,
@@ -80,6 +84,7 @@ import { DisplayNotesComponent } from './Components/display-notes/display-notes.
         ],
       } as SocialAuthServiceConfig,
     },
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

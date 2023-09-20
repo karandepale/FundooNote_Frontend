@@ -7,7 +7,8 @@ import { HttpService } from '../HTTP/http.service';
   providedIn: 'root'
 })
 export class UserService {
-
+  constructor(private httpService:HttpService) { }
+  
   // SETTING and GETTING THE USER DATA FROM LOGIN COMPONENT:-
   private userData: any;
   setUserData(data: any) {
@@ -17,8 +18,6 @@ export class UserService {
     return this.userData;
   }
 
-  constructor(private httpService:HttpService) { }
-  
   
   Login(data:any){
     let header = {

@@ -1,0 +1,33 @@
+/* Adjust the width as needed */
+::ng-deep .mat-dialog-container {
+    max-width: 600px;
+    width: 80%; 
+  }
+   
+  h4{
+    color:black;
+    font-style: italic;
+  }
+
+  .maincontainerrr{
+    display:flex;
+    // flex-direction: column;
+  }
+
+  .userProfile{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    background-color: cadetblue;
+    color:black;
+    font-weight:400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:10px;
+    // border:1px solid black;
+  }
+
+  h3{
+    font-weight: 600;
+  }

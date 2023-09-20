@@ -6,7 +6,7 @@ import { UserService } from 'src/app/Services/USER/user.service';
 import { OnInit } from '@angular/core';
 import { NotesService } from 'src/app/Services/NOTE/notes.service';
 
-
+ 
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
@@ -15,25 +15,40 @@ import { NotesService } from 'src/app/Services/NOTE/notes.service';
 export class DashBoardComponent implements OnInit  {
   userData: any;
   listView = true;
-  // noteList: any[] = [];
-
+  filteredNotes: any[] = [];
+  noteList: any[] = [];
+ 
   constructor( private userService:UserService , private noteService:NotesService ,changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private route:Router, private popup:MatSnackBar
     ) {}
 
-  ngOnInit(): void {
-     this.userData = this.userService.getUserData();
-      console.log('User Data in Dashboard page:', this.userData);
+      ngOnInit(): void {
+      this.userData = this.userService.getUserData();
+     // console.log('User Data in Dashboard page:', this.userData);
 
-      // this.noteService.getAllNotes().subscribe(
-      //   (notes: any) => {
-      //     this.noteList = notes; // Populate the notes array
-      //     console.log('Notes:', this.noteList);
-      //   },
-      //   (error: any) => {
-      //     console.error('Error fetching notes:', error);
-      //   }
-      // );
-     
+      this.noteList = this.noteService.getNoteList();
+     // console.log( 'NoteList Data in my Dashboard: ' , this.noteList);
+
+      this.filteredNotes = [...this.noteList];
+
+  }
+
+  // searchNotes(event: any): void {
+  //   const searchText = event.target.value.toLowerCase();
+
+  //   // Filter the notes based on the search input
+  //   this.filteredNotes = this.noteList.filter((note) => {
+  //     const title = note.title.toLowerCase();
+  //     const description = note.description.toLowerCase();
+
+  //     return title.includes(searchText) || description.includes(searchText);
+  //   });
+  //   this.noteService.setFilteredNotes(this.filteredNotes);
+  //   console.log("*********" , this.filteredNotes);
+  //     }
+
+  searchNotes(event: any): void {
+    const searchText = event.target.value;
+    this.noteService.filterNotes(searchText);
   }
 
 
@@ -43,10 +58,6 @@ export class DashBoardComponent implements OnInit  {
     this.route.navigateByUrl("")
     this.popup.open('Logout')
   }
-   searchNote(event:any){
-  //   console.log('event.target.value',event.target.value);
-  //   //this.dataService.sendMessage(event.target.value);
-   }
 
    toggleNotesView(){
    //  this.listView = !this.listView;

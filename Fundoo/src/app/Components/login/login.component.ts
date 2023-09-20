@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor( private snackBar:MatSnackBar , private formBuilder:FormBuilder, private userService:UserService, private route:Router) { }
 
-ngOnInit(): void {  }
+ngOnInit(): void {  } 
 
 loginForm = new FormGroup({
   email:new FormControl("", Validators.required),
@@ -42,13 +42,6 @@ loginHandler(){
    }
  });
 
-//  createAccHandler(){
-//   console.log("Clicked...");
-// }
-
-
 }
-
-
 
 }

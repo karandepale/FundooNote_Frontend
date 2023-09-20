@@ -1,0 +1,54 @@
+<!-- <div class="main"> -->
+<mat-card class="noteCardContainer "> 
+    <!-- <mat-card [ngClass]="flag== ? 'noteCardContainer' : ''"> -->
+    <!-- <form [formGroup]="takenote" (ngSubmit)="OnSubmit()"> -->
+    <form [formGroup]="createNoteForm" (ngSubmit)="OnSubmit()">
+        <!-- <div class="up" (click)="hideAndShow()" *ngIf="show || !show"> -->
+        <div class="up" (click)="toggleHandler()" *ngIf="flag==true || flag==false">
+            <input placeholder="Title" class="titleInput" formControlName="title">
+            <div class="titleImgSection">
+                <!-- <div *ngIf="ImgOne"> -->
+                <div>
+                    <!-- <mat-icon>check_box</mat-icon> -->
+                    <a class="iconstag1"> <img src="../../../assets/outline_check_box_black_24dp.png" height="25px"
+                            title="New List"> </a>
+                    <a class="iconstag2"> <img src="../../../assets/outline_edit_black_24dp.png" height="25px"
+                            title="New Note With Drawing"> </a>
+                    <a class="iconstag3"> <img src="../../../assets/outline_image_black_24dp.png" height="25px"
+                            title="New Note With Image"> </a>
+                    <!-- <mat-icon>image</mat-icon> -->
+                </div>
+                <!-- <span *ngIf="ImgTwo"> -->
+                <span>
+                    <a> <img src="../../../assets/pinicon.PNG" height="25px" title="Pin Note"> </a>
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="flag==false" >
+        <div class="down">
+            <div appearance="fill">
+                <textarea matInput placeholder="Take a note..." class="takeanote" formControlName="description" class="inbx"></textarea>
+            </div>
+            <div class="bottomIcon">
+                <div> 
+                    <img src="../../../assets/outline_add_alert_black_24dp.png" alt="Remind" class="icon">
+                    <img src="../../../assets/outline_person_add_alt_black_24dp.png" alt="collab" class="icon">
+                    <img src="../../../assets/outline_palette_black_24dp.png" alt="Background" class="icon">
+                    <img src="../../../assets/outline_image_black_24dp.png" alt="image" class="icon">
+                    <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.png" alt="Archive" class="icon">
+                    <img src="../../../assets/outline_more_vert_black_24dp.png" alt="more" class="icon">
+                  </div>
+                <div>
+                    <!-- <button mat-button (ngSubmit)="OnSubmit()">Close</button> -->
+                    <button mat-button (click)="closeHandler()" >Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+    </form>
+    
+</mat-card>
+<!-- </div> -->
